@@ -13,5 +13,14 @@ export default function configureStore(preloadedState) {
 
   const store = createStore(rootReducer, preloadedState, enhancedCompose);
 
+  if (process.env.NODE_ENV !== "production") {
+    if (module.hot) {
+      module.hot.accept("../reducers/rootReducer", () => {
+        const rootReducer = require("../reducers/rootReducer").default;
+        store.replaceReducer(rootReducer);
+      });
+    }
+  }
+
   return store;
 }

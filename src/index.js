@@ -1,14 +1,31 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import App from "./App";
 import configureStore from "./store/configureStore";
+import "semantic-ui-css/semantic.css";
 
 const store = configureStore();
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.querySelector("#root")
-);
+let rootEl = document.querySelector("#root");
+
+let render = () => {
+  const App = require("./App").default; // Dynamically importing the app component
+
+  return ReactDOM.render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    rootEl
+  );
+};
+
+if (process.env.NODE_ENV !== "production") {
+  if (module.hot) {
+    // Whenever the app component or any one of it's dependencies changes, re-import the updated component and re-render it.
+    module.hot.accept("./App", () => {
+      setTimeout(render);
+    });
+  }
+}
+
+render();
