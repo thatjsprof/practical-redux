@@ -13,6 +13,7 @@
     "react-scripts": "4.0.3",
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.9",
+    "redux-orm": "^0.16.2",
     "redux-thunk": "^2.2.0",
     "reselect": "^3.0.1",
     "semantic-ui-css": "^2.4.1",

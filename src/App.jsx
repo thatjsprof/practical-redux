@@ -5,6 +5,7 @@ import UnitsInfo from "./features/unitsInfo/unitsInfo";
 import UnitOrganizations from "./features/unitOrganization/unitOrganization";
 import Pilots from "./features/pilots/pilots";
 import Mechs from "./features/mechs/mechs";
+import Tools from "./features/tools/tools";
 import "./App.css";
 
 const App = () => {
@@ -16,6 +17,11 @@ const App = () => {
       name: "unitOrganization",
       label: "Unit Organization",
       component: UnitOrganizations,
+    },
+    {
+      name: "Tools",
+      label: "Tools",
+      component: Tools,
     },
   ];
 
