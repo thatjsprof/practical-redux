@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import { Header, Container } from "semantic-ui-react";
-import TabBar from "./features/tab/tabBar";
-import UnitsInfo from "./features/unitsInfo/unitsInfo";
-import UnitOrganizations from "./features/unitOrganization/unitOrganization";
-import Pilots from "./features/pilots/pilots";
-import Mechs from "./features/mechs/mechs";
-import Tools from "./features/tools/tools";
+import TabBar from "../../features/tab/tabBar";
+import UnitsInfo from "../../features/unitsInfo/unitsInfo";
+import UnitOrganizations from "../../features/unitOrganization/unitOrganization";
+import Pilots from "../../features/pilots/pilots";
+import Mechs from "../../features/mechs/mechs";
+import Tools from "../../features/tools/tools";
 import "./App.css";
 
 const App = () => {

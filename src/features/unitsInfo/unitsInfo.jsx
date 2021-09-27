@@ -11,7 +11,7 @@ const FACTIONS = [
   { value: "wd", text: "Wolf's Dragoons" },
 ];
 
-const UnitsInfo = ({ returnUnitInfo }) => {
+const UnitsInfo = ({ returnUnitInfo = {} }) => {
   const { name, affiliation } = returnUnitInfo;
   return (
     <Segment attached="bottom">
